@@ -1,0 +1,619 @@
+body {
+    direction: rtl;
+}
+.slick-slider {
+    direction: ltr;
+}
+.slick-slide {
+    direction: rtl;
+}
+.logo {
+    float: right;
+    margin-left: 70px;
+    margin-right: 0;
+}
+.logo > a > i {
+    margin-left: 6px;
+    margin-right: 0;
+}
+.menu-options {
+    float: right;
+}
+.search-dashboard {
+    float: right;
+    margin-left: 0;
+    margin-right: 80px;
+}
+.custom-dropdowns {
+    float: right;
+    margin-left: 0;
+    margin-right: 50px;
+}
+.open-panel, .full-screen-btn {
+    float: left;
+}
+.name-area {
+    float: left;
+    margin-left: 30px;
+    margin-right: 0;
+}
+.drop-list > ul > li > a {
+    padding-left: 0;
+    padding-right: 55px;
+}
+.drop-list > ul > li > a span {
+    left: auto;
+    margin-right: 0;
+    right: 0;
+}
+.drop-list > ul > li > a .status {
+    left: -15px;
+    right: auto;
+}
+.daterangepicker .ranges li {
+    text-align: right;
+}
+.main-title-sec > .row > div:first-child {
+    float: right;
+}
+.date-range {
+    float: left;
+}
+.quick-btn-title {
+    float: left;
+}
+.date-range > i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.date-range > b {
+    margin-left: 0;
+    margin-right: 8px;
+}
+.widget-controls {
+    float: left;
+}
+.widget-title > h3 {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.widget-title > span {
+    float: right;
+}
+.tckt-status {
+    float: right;
+}
+.tckt-status > span {
+    float: right;
+}
+.tckt-number {
+    float: right;
+}
+.task-graph-chart {
+    padding-right: 30px;
+}
+.social-activities > ul > li {
+    padding-left: 0;
+    padding-right: 50px;
+}
+.social-activities > ul > li > i {
+    left: auto;
+    right: 0;
+}
+.panel-default > .panel-heading > .dropdown {
+    float: left;
+}
+.side-menus nav > ul > li > a > i {
+    float: right;
+    margin-left: 4px;
+    margin-right: 0;
+}
+.side-menus ul li a span i.badge, .side-menus ul li a i.badge {
+    float: left;
+}
+.side-menus nav > ul > li.menu-item-has-children > ul > li > a {
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.side-menus nav > ul > li.menu-item-has-children > ul > li > a::before {
+    left: auto;
+    right: 30px;
+}
+.top-bar {
+    padding-left: 19px;
+    padding-right: 0;
+}
+.breadcrumbs > li {
+    float: right;
+}
+.breadcrumbs > li {
+    float: right;
+    margin-left: 25px;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-right: 0;
+}
+.breadcrumbs > li::before {
+    left: 0;
+    right: auto;
+}
+.quick-report-widget.style2 * {
+    text-align: right !important;
+}
+.progress-bar {
+    float: right;
+}
+.balance-widget {
+    padding-left: 30px;
+    padding-right: 85px;
+}
+.balance-widget > span.sparkpie {
+    left: auto;
+    right: 27px;
+}
+.mini-profile-area {
+    padding-left: 0;
+    padding-right: 90px;
+}
+.mini-profile-area > span {
+    left: auto;
+    right: 0;
+}
+.social-btns {
+    float: left;
+}
+.save-draft > form input[type="submit"] {
+    float: right;
+}
+.ribbon-wrapper {
+    direction: ltr;
+}
+.carousal-widget li > h3 {
+    text-align: right;
+}
+.carousal-widget li > i {
+    float: right;
+    text-align: right;
+}
+.carousal-avatar {
+    padding-left: 0;
+    padding-right: 75px;
+    text-align: right;
+}
+.carousal-avatar > span {
+    left: auto;
+    right: 0;
+}
+.carousal-widget.fb-carousel ul li > span {
+    text-align: right;
+}
+.fb-status > div {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.twitter-avatar > span {
+    left: auto;
+    right: 20px;
+}
+.twitter-avatar > h3 {
+    padding-left: 0;
+    padding-right: 20px;
+}
+.user-comments > li {
+    padding-left: 0;
+    padding-right: 85px;
+}
+.user-comments > li .user-avatar {
+    left: auto;
+    right: 0;
+}
+.forum-threads > li {
+    padding-left: 0;
+    padding-right: 77px;
+}
+.user-avatar {
+    left: auto;
+    right: 0;
+}
+.timeline-gallery > ul > li {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.timeline-content > .btn-group > label {
+    float: right;
+}
+#live-chat h4::before {
+    margin-left: 10px;
+}
+.chat-message {
+    padding-left: 20px;
+    padding-right: 73px;
+}
+.chat-message img {
+    left: auto;
+    right: 20px;
+}
+.chat-time {
+    float: left;
+}
+.client-info > a {
+    right: auto;
+    left: 0px;
+}
+.client-list > li > span {
+    float: right;
+    margin-left: 20px;
+}
+.product-info .price > ins {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.product-info .price > ins > i {
+    margin: 0 0 0 7px;
+}
+.tickLabels {
+    direction: ltr;
+}
+.twitter-profile {
+    padding-left: 30px;
+    padding-right: 125px;
+}
+.twitter-profile > span {
+    left: auto;
+    right: 30px;
+}
+.twitter-profile > h3 > i {
+    float: right;
+}
+.up-or-down {
+    right: auto;
+    left: 0;
+    margin-left: 0;
+}
+.mail-menu > ul > li > a > span {
+    float: left;
+}
+.inbox-msg {
+    float: right;
+}
+.inbox-msg > span {
+    float: right;
+    margin-left: 8px;
+    margin-right: 0;
+}
+.send-mail {
+    float: right;
+}
+.profile-avatar {
+    padding-left: 0;
+    padding-right: 150px;
+}
+.profile-avatar > span {
+    left: auto;
+    right: 0;
+}
+.profile-name .social-btns > li {
+    float: right;
+}
+.profile-name .social-btns > li:first-child {
+    margin-left: 5px;
+}
+.friend-list li img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.friend-list li > span {
+    left: 30px;
+    right: auto;
+}
+.birthday > h3 > span {
+    float: left;
+}
+.timeline2 {
+    direction: ltr;
+}
+.timeline2 ul li.in-view div {
+    text-align: right;
+}
+.prettyprint ol.linenums {
+    padding-left: 0 !important;
+    padding-right: 47px;
+}
+.prettyprint ol.linenums li {
+    border-left: medium none transparent !important;
+    border-right: 3px solid #6ce26c;
+    padding-right: 10px;
+}
+.top-bar-chart {
+    float: left;
+    margin-left: 0;
+    margin-right: 40px;
+}
+.c-collapse > h2 i {
+    float: right;
+    margin-left: 17px;
+    margin-right: 0;
+}
+.input-group {
+    direction: ltr;
+}
+.input-group input {
+    text-align: right;
+}
+.anchor > li {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.actionBar > a {
+    float: right;
+    margin-left: 7px;
+    margin-right: 0;
+}
+[id^="frmb-"][id$="-form-wrap"] .frmb .field-actions {
+    left: 0;
+    right: auto;
+}
+.alert > span > i {
+    left: auto;
+    right: 30px;
+}
+.alert.white {
+    padding-left: 30px;
+    padding-right: 80px;
+}
+.price-here2 > i {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.price-btn2 > a {
+    float: right;
+}
+.price-feature2::before {
+    left: auto;
+    right: 0;
+}
+#task-container p {
+    text-align: right;
+}
+.tdl-holder li span {
+    margin-left: 0;
+    margin-right: 30px;
+}
+.blog-info > p {
+    padding-left: 140px;
+    padding-right: 0;
+}
+.post-tags > span {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.post-tags > span > i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.comment-form form label i {
+    left: auto;
+    right: 40px;
+}
+.theme-btn {
+    float: right;
+}
+.contact-details .social-btns {
+    float: right;
+}
+.subscribe-us > form {
+    float: right;
+}
+.contact-form > form .row > div > i {
+    left: auto;
+    right: 50px;
+}
+.contact-form > form button {
+    float: right;
+}
+.subscribe-us > form > input[type="text"] {
+    padding: 0 90px 0 30px;
+}
+.invoice-sec > span {
+    text-align: right;
+}
+.search_widget > form button {
+    left: 7px;
+    right: auto;
+}
+.search-result > img {
+    left: 0;
+}
+.team-info > span {
+    float: right;
+    padding: 0;
+}
+.service .c-btn {
+    float: right;
+}
+.square-infos > a {
+    float: right;
+}
+.mini-portfolio .portfolio-info > ul {
+    float: right;
+    width: auto;
+}
+.mini-portfolio .portfolio-info {
+    width: 100%;
+}
+.fontawesome-icon-list a > i {
+    margin-left: 7px;
+    margin-right: 0;
+}
+.product-box span.price {
+    float: right;
+}
+.cart-thumb {
+    float: right;
+}
+.cart-thumb > span {
+    float: right;
+    margin-left: 20px;
+}
+.cart-thumb > a.delete-cart {
+    border-radius: 50% 0 20px 20px;
+    left: auto;
+    right: 0;
+}
+.cart-thumb > h3 {
+    padding: 0;
+}
+.price-cart-item span {
+    float: right;
+}
+.cart-thumb > p {
+    padding: 0;
+}
+.cart-item-quantity > i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.cart-total-box .flat-btn {
+    float: right;
+}
+.payment-desc > span::before {
+    left: auto;
+    right: 22px;
+}
+.payment a {
+    float: right;
+}
+.account-form > form div.feild {
+    float: right;
+}
+.account-form > form .feild > input[type="submit"] {
+    float: right;
+}
+.creat-an-account {
+    float: right;
+    text-align: right;
+}
+.creat-an-account > span {
+    text-align: right;
+}
+.creat-an-account > a {
+    float: right;
+}
+.account-form label input {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.creat-an-account > ul > li {
+    float: right;
+}
+.full-report > ul li i {
+    margin-left: 10px;
+}
+.contact-infos > ul > li > span > i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.controls.portfolio-nav > ul > li > i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.icons-container > span:first-child {
+    float: right;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.account-top-bar .logo {
+    margin-left: 40px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.visit-table > ul > li > span img {
+    float: right;
+    margin-right: 0;
+    margin-left: 16px;
+}
+.visit-table > ul > li > i {
+    text-align: right;
+    padding-right: 24px;
+}
+.single-product-infos a.flat-btn {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.flat-btn > i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.slide-panel {
+    margin-right: 0;
+}
+.msgBox > a.close {
+    float: left;
+}
+#keywords thead tr th {
+    text-align: center;
+}
+#task-container li.complete::before {
+    margin-right: -71px;
+    right: 100%;
+    width: 55px;
+}
+.c-btn {
+    float: right;
+}
+.icon-btn {
+    float: right;
+}
+.checkbox label, .radio label {
+    padding-left: 0;
+    padding-right: 30px;
+}
+.checkbox input[type="checkbox"], 
+.checkbox-inline input[type="checkbox"], 
+.radio input[type="radio"], 
+.radio-inline input[type="radio"] {
+    margin-left: 0;
+    margin-right: -24px;
+}
+.modal-header .close {
+    float: left;
+}
+.toggle-setting {
+    direction: ltr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
