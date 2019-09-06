@@ -50,6 +50,8 @@ function search(searchFormId, resultTableId) {
     }) ;  
 }
 
+
+
 function refresh(resultTableId){
     $.ajax({
         url : 'custodies/refresh' , 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth ;
 use App\Permissions\Permissions ; 
 use App\Sponsor ;
+use App\Operation;
 
 class SponsorsController extends Controller
 {
@@ -41,14 +42,27 @@ class SponsorsController extends Controller
             'sponsorshipImage' => 'storage/sponsorsImages/'.$request->Pfile->getClientOriginalName() ,      
             'phone' => $request->input('phone') ,
             'salary' =>$request->input('salary')
-        ]))
+        ])){
+            $name = $request->input('name') ;
+            Operation::create([
+                'user_id' => Auth::user()->user_id , 
+                'details' => "اضافه الكفيل $name" ,
+            ]) ;
+            
             return 'true' ;
+        }
         return 'false' ;
     }
 
     public function delete($id){
-        if(Sponsor::where('id',$id)->delete())
+        $name = Sponsor::find($id)['name'];
+        if(Sponsor::where('id',$id)->delete()){
+            Operation::create([
+                'user_id' => Auth::user()->user_id , 
+                'details' => "حذف الكفيل $name" ,
+            ]) ;
             return 'true' ;
+        }
         return 'false' ;
     }
     public function get($id){
@@ -83,8 +97,14 @@ class SponsorsController extends Controller
             $sponsor->sponsorshipImage = 'storage/sponsorsImages/'.$request->Pfile->getClientOriginalName() ;
         }
 
-        if($sponsor->save())
+        if($sponsor->save()){
+            $name = Sponsor::find($request->input('id'))['name'];
+            Operation::create([
+                'user_id' => Auth::user()->user_id , 
+                'details' => "التعديل على الكفيل $name" ,
+            ]) ;
             return "true" ; 
+        }
         return "false" ; 
 
     }
@@ -103,13 +123,13 @@ class SponsorsController extends Controller
         $q = Sponsor::query() ;
 
         if ($name != '') 
-            $q->where("name","LIKE" , $name);
+            $q->where("name","LIKE" , "%$name%");
         if ($phone != '') 
-            $q->where("phone","LIKE" , $phone);
+            $q->where("phone","LIKE" , "%$phone%");
         if ($address != '') 
-            $q->where("address","LIKE" , $address) ;
+            $q->where("address","LIKE" , "%$address%") ;
         if ($identityNum != '') 
-            $q->where("identityNum","LIKE" , $identityNum) ;
+            $q->where("identityNum","LIKE" , "%$identityNum%") ;
         $sponsors = $q->get() ;
 
         return view('sponsors.search',['sponsors' => $sponsors,'operation' => 'search']) ;

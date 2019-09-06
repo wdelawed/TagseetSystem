@@ -84,7 +84,7 @@
                                                         <tr>
                                                             <td>{{$user->user_id}}</td>
                                                             <td>{{$user->name}}</td>
-                                                            <td>{{$user->email}}</td>
+                                                            <td>{{$user->phone}}</td>
                                                             <td>{{$user->identityNum}}</td>
                                                             <td>
                                                                 <a href="#" class="taction" data-toggle="modal" onclick="edit({{$user->user_id}})" data-id="{{$user->user_id}}"><span class="fa fa-edit" ></span></a>

@@ -79,7 +79,7 @@ class CustodyController extends Controller
         $q = User::query() ;
 
         if ($name != '') 
-            $q->where("name","LIKE" , $name);
+            $q->where("name","LIKE" , "%$name%");
         $users = $q->get() ;
 
         return view('custodies.search',['users' => $users,'operation' => 'search']) ;

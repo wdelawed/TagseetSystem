@@ -72,6 +72,16 @@ function search(searchFormId, resultTableId) {
         console.log("search done", data,resultTableId) ;
     }) ;  
 }
+function searchAccount(searchFormId, resultTableId) {
+    $.ajax({
+        url : '/employees/searchAccount' , 
+        data : $("#"+searchFormId).serialize() , 
+        method : "POST" 
+    }).done(function(data){
+        $("#"+resultTableId).html(data) ;
+        console.log("search done", data,resultTableId) ;
+    }) ;  
+}
 
 function refresh(resultTableId){
     $.ajax({

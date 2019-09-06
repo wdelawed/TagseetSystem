@@ -51,7 +51,7 @@ class OperationsController extends Controller
         if ($user_id != '') 
             $q->where("user_id","LIKE" , $user_id);
         if ($details != '') 
-            $q->where("details","LIKE" , $details);
+            $q->where("details","LIKE" , '%'.$details.'%');
         if ($from != '') 
             $q->where("created_at",">=" , $from) ;
         if ($to != '') 

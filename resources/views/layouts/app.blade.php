@@ -13,9 +13,9 @@
     <!-- Meta-Information -->
     <title>Tagseet App </title>
     <meta charset="utf-8">
-    <meta name="description" content="Glade is a clean and powerful ready to use responsive AngularJs Admin Template based on Latest Bootstrap version and powered by jQuery, Glade comes with 3 amazing Dashboard layouts. Glade is completely flexible and user friendly admin template as it supports all the browsers and looks awesome on any device.">
-    <meta name="keywords" content="admin, admin dashboard, angular admin, bootstrap admin, dashboard, modern admin, responsive admin, web admin, web app, bitlers">
-    <meta name="author" content="bitlers">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
@@ -40,7 +40,7 @@
     <header class="simple-normal light">
         <div class="top-bar">
             <div class="logo">
-                <a href="index.html" title=""><i class="fa fa-bullseye"></i> Glade</a>
+                <a href="#" title=""><i class="fa fa-bullseye"></i> Absher</a>
             </div>
             <div class="menu-options"><span class="menu-action"><i></i></span></div>
             <div class="top-bar-quick-sec">
@@ -76,7 +76,13 @@
                             </li>
                         @endif
                         @if(Auth::user()->has(Permissions::$PERMISSION_READ, Permissions::$CUSTOMERS))
-                            <li><a href="/customers"><i class="ti-desktop"></i><span>العملاء </span></a></li></a></li>
+                            <li class="menu-item-has-children">
+                                <a title=""><i class="ti-heart"></i><span>العملاء</span></a>
+                                <ul class="mega">
+                                    <li><a href="/Customers">ادارة العملاء</a></li>
+                                    <li><a href="/Customers/create">إضافة عميل جديد</a></li>
+                                </ul>
+                            </li>
                         @endif
                         @if(Auth::user()->has(Permissions::$PERMISSION_READ, Permissions::$SPONSORS))
                             <li><a href="/sponsors"><i class="ti-desktop"></i><span>الكفلاء </span></a></li></a></li>

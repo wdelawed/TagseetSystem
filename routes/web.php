@@ -35,16 +35,20 @@ Route::get('/employees/delete/{id}','EmployeesController@delete') ;
 Route::get('/employees/get/{id}','EmployeesController@get') ;
 Route::get('/employees/refresh','EmployeesController@refresh') ;
 Route::get('/employees/account','EmployeesController@account') ;
+Route::post('employees/searchAccount','EmployeesController@searchAccount') ;
 
 
 
-            Route::get('/customers','CustomersController@index') ;
-    Route::post('/customers/update','CustomersController@update') ;
-    Route::post('/customers/create','CustomersController@create') ;
-    Route::post('/customers/search','CustomersController@search') ;
-Route::get('/customers/delete/{id}','CustomersController@delete') ;
-   Route::get('/customers/get/{id}','CustomersController@get') ;
-    Route::get('/customers/refresh','CustomersController@refresh') ;
+//            Route::get('/customers','CustomersController@index') ;
+//    Route::post('/customers/update','CustomersController@update') ;
+ //   Route::post('/customers/create','CustomersController@create') ;
+ //   Route::post('/customers/search','CustomersController@search') ;
+//Route::get('/customers/delete/{id}','CustomersController@delete') ;
+//   Route::get('/customers/get/{id}','CustomersController@get') ;
+//    Route::get('/customers/refresh','CustomersController@refresh') ;
+
+    Route::get('/Customers/search', 'CustomersController@search');
+       Route::resource("Customers", "CustomersController");
 
 
             Route::get('/sponsors','SponsorsController@index') ;

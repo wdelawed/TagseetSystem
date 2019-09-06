@@ -7,6 +7,7 @@ use Auth ;
 use App\Permissions\Permissions ;
 use App\Role ;
 use View ;
+use App\Operation ;
 
 class RolesController extends Controller
 {
@@ -39,14 +40,26 @@ class RolesController extends Controller
             'sponsors'       => 0,
             'reports'        => 0,
             'operations_log' => 0 
-        ])) ;
+        ])) {
+            $name = $request->input('role_name') ;
+            Operation::create([
+                'user_id' => Auth::user()->user_id , 
+                'details' => "اضافه دور جديد باسم $name" ,
+            ]) ;
             return 'true' ;
+        }
         return 'false' ;
     }
 
     public function delete($id){
-        if(Role::where('role_id',$id)->delete())
+        $name = Role::find($id)['role_name'] ;
+        if(Role::where('role_id',$id)->delete()){
+            Operation::create([
+                'user_id' => Auth::user()->user_id , 
+                'details' => "حذف الدور $name" ,
+            ]) ;
             return 'true' ;
+        }
         return 'false' ;
     }
     public function get($id){
@@ -196,8 +209,14 @@ class RolesController extends Controller
         $role->roles = $roles ;
         $role->store = $stock ;
 
-        if($role->save())
+        if($role->save()){
+            $name = $request->input('name') ;
+            Operation::create([
+                'user_id' => Auth::user()->user_id , 
+                'details' => "التعديل على الدور $name" ,
+            ]) ;
             return 'true' ;
+        }
         return 'false' ;
 
 
