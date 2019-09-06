@@ -34,6 +34,7 @@ Route::post('/employees/search','EmployeesController@search') ;
 Route::get('/employees/delete/{id}','EmployeesController@delete') ;
 Route::get('/employees/get/{id}','EmployeesController@get') ;
 Route::get('/employees/refresh','EmployeesController@refresh') ;
+Route::get('/employees/account','EmployeesController@account') ;
 
 
 
@@ -61,6 +62,7 @@ Route::get('/sponsors/delete/{id}','SponsorsController@delete') ;
 Route::get('/custodies/delete/{id}','CustodyController@delete') ;
    Route::get('/custodies/get/{id}','CustodyController@get') ;
     Route::get('/custodies/refresh','CustodyController@refresh') ;
+    Route::get('/custodies/all','CustodyController@all') ;
 
             Route::get('/oplog','OperationsController@index') ;
     Route::post('/oplog/search','OperationsController@search') ;

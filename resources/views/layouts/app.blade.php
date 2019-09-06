@@ -91,9 +91,9 @@
                             <li class="menu-item-has-children">
                                 <a title=""><i class="ti-rocket"></i><span>التقارير</span></a>
                                 <ul>
-                                    <li><a href="/customers_account_list">كشف حساب عميل</a></li>
-                                    <li><a href="/employee_account_list">كشف حساب موظف</a></li>
-                                    <li><a href="/employees_custodies">جرد عهد الموظفين </a></li>
+                                    <li><a href="/customers/account">كشف حساب عميل</a></li>
+                                    <li><a href="/employees/account">كشف حساب موظف</a></li>
+                                    <li><a href="/custodies/all">جرد عهد الموظفين </a></li>
                                 </ul>
                             </li>
                         @endif

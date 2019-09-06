@@ -91,4 +91,24 @@ class CustodyController extends Controller
         return view('custodies.search',['users'=> $users,'operation' => 'refresh']) ;
     }
 
+    public function all() {
+        $permissions = [ 'C' =>  Auth::user()->fresh()->has(Permissions::$PERMISSION_CREATE, Permissions::$REPORTS) , 
+                         'R' =>  Auth::user()->fresh()->has(Permissions::$PERMISSION_READ, Permissions::$REPORTS),
+                         'U' =>  Auth::user()->fresh()->has(Permissions::$PERMISSION_UPDATE, Permissions::$REPORTS),
+                         'D' =>  Auth::user()->fresh()->has(Permissions::$PERMISSION_DELETE, Permissions::$REPORTS) , 
+                         'T' =>  Auth::user()->fresh()->has(Permissions::$PERMISSION_RESCHEDULE, Permissions::$REPORTS) , 
+                         'S' =>  Auth::user()->fresh()->has(Permissions::$PERMISSION_SEARCH, Permissions::$REPORTS) ,
+                       ] ; 
+        $users = User::get() ; 
+        //return $users[0]->custodies->where('amount', '>', 0)->sum('amount') ;
+        $users->map(function ($user){
+            $user['custody_balance'] = $user->custodies->where('amount','>',0)->sum('amount') ; 
+            $user['spends'] = $user->custodies->where('amount','<',0)->sum('amount')*-1 ;
+            $user['total_contracts'] = 0 ; 
+            $user['notes'] = '' ;
+            return $user ;
+        }) ;
+        return view('employees.all',['users'=>$users,'permissions'=>$permissions]) ;
+    }
+
 }

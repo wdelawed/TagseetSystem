@@ -43,5 +43,9 @@ class User extends Authenticatable
         $data = $data / $permission ; 
         return $data  ;
     }
+
+    public function custodies() {
+        return $this->hasMany('App\Custody','user_id') ;
+    }
     
 }
