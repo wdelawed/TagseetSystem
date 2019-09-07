@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-rtl-min.css')}}">
 
-    <title>Account Controle</title>
+    <title>Acount Control</title>
 </head>
 <body>
     @yield('content')
