@@ -12,8 +12,8 @@
                                     <input type="text" placeholder="السلعه" id="name" name="name" class="form-control" value="{{$user->name}}">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="phoneNum">رقم الجوال</label>
-                                    <input type="tel" placeholder="الوصف" id="phoneNum" name="phone" class="form-control" value="{{$user->phone}}">
+                                    <label for="phone">رقم الجوال</label>
+                                    <input type="tel" placeholder="الوصف" id="phone" name="phone" class="form-control" value="{{$user->phone}}">
                                 </div>
                             </div>
                             <br />

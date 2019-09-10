@@ -14,6 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return redirect('employees/');
+});
+Route::get('/logout', function () {
+    if(Auth::user())
+        Auth::logout();
+    return redirect('/login');
+});
 
 Auth::routes();
 
@@ -67,6 +75,19 @@ Route::get('/custodies/delete/{id}','CustodyController@delete') ;
    Route::get('/custodies/get/{id}','CustodyController@get') ;
     Route::get('/custodies/refresh','CustodyController@refresh') ;
     Route::get('/custodies/all','CustodyController@all') ;
+
+    // Route::get('/installments','InstallmentController@index') ;
+    // Route::post('/installments/update','InstallmentController@update') ;
+     Route::get('/installments/create','InstallmentController@create') ;
+     Route::post('/installments/create','InstallmentController@store') ;
+     Route::post('/installments/pay','InstallmentController@pay') ;
+     Route::get('/installments/getCommodity/{id}','InstallmentController@getCommodity') ;
+     Route::get('/installments/getSchedule/{id}','InstallmentController@getSchedule') ;
+    // Route::post('/installments/search','InstallmentController@search') ;
+// Route::get('/installments/delete/{id}','InstallmentController@delete') ;
+//    Route::get('/installments/get/{id}','InstallmentController@get') ;
+    // Route::get('/installments/refresh','InstallmentController@refresh') ;
+    // Route::get('/installments/all','InstallmentController@all') ;
 
             Route::get('/oplog','OperationsController@index') ;
     Route::post('/oplog/search','OperationsController@search') ;

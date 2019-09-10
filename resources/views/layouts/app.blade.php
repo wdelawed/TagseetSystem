@@ -1,3 +1,7 @@
+@php
+    use App\Schedule ;
+    $schedules = Schedule::where('scheduled_date',date('Y-m-d'))->where('status','جديد')->get() ;
+@endphp
 <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -48,14 +52,41 @@
                     <li class="message-list dropdown">
                         <span>
                             <i class="fa fa-bell-o"></i>
-                            <strong class="skyblue-bg">7</strong>
+                            <strong class="skyblue-bg">{{count($schedules)}}</strong>
                         </span>
-                        @yield('paysheet')
+                        <!--paysheet here-->
+                        @if (count($schedules)>0)
+                            <div class="message drop-list">
+                                <span>
+                                    قائمه السداد لهذا اليوم  {{date('Y-m-d')}}
+                                </span>
+                                <ul>   
+                                    @foreach ($schedules as $schedule)
+                                        <li>
+                                            <a href="#"  onclick="paySchedule({{$schedule->id}})" title="">
+                                                <span>
+                                                    <img src="http://placehold.it/40x40" alt="" />
+                                                </span>
+                                                <i>{{$schedule->getInstallment->getCustomer()->first()['name']}}</i> 
+                                                {{$schedule->amount}}  
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                <a href="#" onclick="$('.large-modal2').modal('show');" title="">إظهار الكل</a>
+                            </div>
+                        @endif
                     </li>
                 </ul>
                 <span id="toolFullScreen" class="full-screen-btn"><i class="fa fa-arrows-alt"></i></span>
                 <div class="name-area">
-                <a href="javascript:void(0)" title=""><img src="{{asset(Auth::user()->profileImage)}}" alt="" /> <strong>{{Auth::user()->name}} | <span style="font-size:12px;">{{Auth::user()->role()->value('role_name')}} </span></strong></a>
+                    <a href="/logout" class="btn btn-success" style="margin-top:13px;margin-right:10px; color:white;">تسجيل الخروج<i class="fa fa-logout"></i></a>
+                    <a href="javascript:void(0)" title="">
+                        <img src="{{asset(Auth::user()->profileImage)}}" alt="" /> 
+                        <strong>{{Auth::user()->name}} | 
+                            <span style="font-size:12px;">{{Auth::user()->role()->value('role_name')}} </span>
+                        </strong>
+                    </a>
                 </div>
             </div>
         </div><!-- Top Bar -->
@@ -69,9 +100,9 @@
                             <li class="menu-item-has-children">
                                 <a title=""><i class="ti-email"></i><span>الاقساط</span></a>
                                 <ul>
-                                    <li><a href="installment/create">قسط جديد</a></li>
-                                    <li><a href="installment/schedule">جدولة قسط</a></li>
-                                    <li><a href="installment/paybefore">تكيش</a></li>
+                                    <li><a href="installments/create">قسط جديد</a></li>
+                                    <li><a href="installments/schedule">جدولة قسط</a></li>
+                                    <li><a href="installments/paybefore">تكيش</a></li>
                                 </ul>
                             </li>
                         @endif
@@ -342,6 +373,13 @@
             </div>
         </div>
         <!--End Update Modal-->
+        <!--Start Pay-Installment Modal-->
+        <div class="modal fade large-modal" tabindex="-1" role="dialog" id="payModal">
+            <div class="modal-dialog modal-lg" role="document" id="dataHolder"> 
+            </div>
+        </div>
+        <!--End Pay-Installment Modal-->
+
     <!--End Modals Area-->
 
     <!-- Vendor: Javascripts -->
