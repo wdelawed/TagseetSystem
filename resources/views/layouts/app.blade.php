@@ -393,6 +393,7 @@
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/common.js')}}"></script>
     <script src="{{asset('js/home2.js')}}"></script>
-    @yield('customSrcipts')
+    <script type="text/javascript" src="{{asset('js/installments.js')}}"></script>
+
 </body>
 </html>

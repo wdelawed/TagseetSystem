@@ -149,7 +149,3 @@
     </div>
 </div><!-- Panel Content -->
 @endsection
-
-@section('customSrcipts')
-    <script type="text/javascript" src="{{asset('js/installments.js')}}"></script>
-@endsection
